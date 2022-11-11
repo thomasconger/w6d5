@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+Cat.create!(
+  name: "Garfield",
+  color: "orange",
+  sex: "m",
+  birth_date: DateTime.new(2007,11,19,8,37,48,"-06:00")
+)
