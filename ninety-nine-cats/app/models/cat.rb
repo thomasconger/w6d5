@@ -28,7 +28,7 @@ class Cat < ApplicationRecord
   end
 
   def age
-    Date.today.year - @birth_date.year
+    Date.today.year - birth_date.year
   end
 
   #validates :sphare, inclusion: { in: ["Good", "Bad", "Neutral"] }
