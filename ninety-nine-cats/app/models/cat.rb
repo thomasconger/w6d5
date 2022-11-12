@@ -21,10 +21,14 @@ class Cat < ApplicationRecord
   validates :color, presence: true, inclusion: { in: @@CAT_COLORS}
 
 
-  validate :birth_date_cannot_be_future 
+  validate :birth_date_cannot_be_future
 
   def birth_date_cannot_be_future
     raise 'Birth date cannot be future' if self.birth_date > Date.today
+  end
+
+  def age
+    Date.today.year - @birth_date.year
   end
 
   #validates :sphare, inclusion: { in: ["Good", "Bad", "Neutral"] }

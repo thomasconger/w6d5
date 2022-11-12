@@ -5,14 +5,16 @@
 
 
 
-    <tr>
+    <tr> <!-- Header Row-->
         <th>Name</th>
-        <%@cats.each do |cat|%>
-        <br>
-        <th><%= cat.name %></th>
+    </tr>
+
+
+    <%@cats.each do |cat|%>
+    <tr> <!-- Row per cat -->
+        <td><a href="<%= cat_url(cat.id) %>"><%= cat.name %></a></td>
     </tr>
     <% end %>
-
 
 
 </table>

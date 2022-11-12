@@ -6,9 +6,9 @@ class CatsController < ApplicationController
     end
 
     def show
-        cat = Cat.find_by(id: params[:id])
-        if cat
-            render json: cat
+        @cat = Cat.find_by(id: params[:id])
+        if @cat
+            render :show
         else
             render plain: 'Cat not Found!!'
         end
