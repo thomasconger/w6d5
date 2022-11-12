@@ -1,0 +1,18 @@
+<h1> Cats </h1>
+
+
+<table>
+
+
+
+    <tr>
+        <th>Name</th>
+        <%@cats.each do |cat|%>
+        <br>
+        <th><%= cat.name %></th>
+    </tr>
+    <% end %>
+
+
+
+</table>
